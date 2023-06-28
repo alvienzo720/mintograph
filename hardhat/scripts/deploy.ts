@@ -5,9 +5,6 @@ async function main() {
   const simpleNFT = await SimpleNFT.deploy();
   console.log("Contract Deployed to: ", simpleNFT.address);
 
-
-
-
 }
 
 // We recommend this pattern to be able to use async/await everywhere
