@@ -1,6 +1,5 @@
 import { Request, Response } from "express"
 import { ethers } from "ethers"
-import { ConfigParams } from "../config";
 import { sendMessage } from "../utils/telegram";
 import { provider } from "../config";
 
