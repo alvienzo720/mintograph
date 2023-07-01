@@ -7,7 +7,8 @@ export const ConfigParams = {
     WHITELISTED_USERS: [541365365],
     TELEGRAM_DELETE_MESSAGE_INTERVAL: 10,
     CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS || "",
-    RECIPIENT_ADDRESS: process.env.RECIPIENT_ADDRESS || "",
+    SENDER_ADDRESS: process.env.SENDER_ADDRESS || "",
+    RECI_ADDRESS: process.env.RECI_ADDRESS || "",
     TOKENURI: process.env.TOKENURI || ""
 }
 
