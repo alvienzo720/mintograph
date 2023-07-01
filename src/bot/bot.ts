@@ -1,8 +1,9 @@
 import { Telegraf, Markup } from 'telegraf'
-import { ConfigParams } from '../config'
+import { ConfigParams, provider } from '../config'
 import { connetWallet, walletBalance } from '../controllers/walletController';
 import { sendMessage } from '../utils/telegram';
 import { mintNFT } from '../controllers/mintNFT';
+import { transferNFT } from '../controllers/transferNFT';
 
 
 const bot = new Telegraf(ConfigParams.BOT_TOKEN)
@@ -55,6 +56,14 @@ bot.action("mintnft", async (ctx) => {
 
     }
 
+})
+
+bot.action("transfernft", async(ctx)=>{
+    try {
+        transferNFT(provider, ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.SENDER_ADDRESS,ConfigParams.RECI_ADDRESS,16)
+    } catch (error) {
+        console.log(error);
+    }
 })
 
 export { bot }
