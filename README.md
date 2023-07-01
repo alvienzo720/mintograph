@@ -4,9 +4,10 @@ Mintograph is a Telegram bot designed to simplify the process of creating and ma
 
 ## Features
 
-- Connect your Metamask wallet seamlessly.
-- Mint your own NFTs by uploading images.
+
+- Mint your own NFTs.
 - View and manage your NFTs directly through Telegram.
+- Transafer NFTS to to other addresses.
 
 ## Technologies Used
 
