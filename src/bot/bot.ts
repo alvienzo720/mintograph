@@ -50,7 +50,7 @@ bot.action("walletbalance", async (ctx) => {
 
 bot.action("mintnft", async (ctx) => {
     try {
-        mintNFT( ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.TOKENURI)
+        mintNFT(ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.TOKENURI)
     } catch (error) {
         console.log(error);
 
@@ -58,12 +58,23 @@ bot.action("mintnft", async (ctx) => {
 
 })
 
-bot.action("transfernft", async(ctx)=>{
-    try {
-        transferNFT(provider, ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.SENDER_ADDRESS,ConfigParams.RECI_ADDRESS,16)
-    } catch (error) {
-        console.log(error);
-    }
+let reciver_address = ""
+bot.action("transfernft", async (ctx) => {
+    ctx.reply('Please enter the recipient\'s address');
+    bot.on('text', (ctx) => {
+        reciver_address = ctx.message.text;
+        try {
+            if(reciver_address.length == 42 && reciver_address.startsWith("Ox")){
+                transferNFT(provider, ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.SENDER_ADDRESS, reciver_address, 21);
+            }else {
+                ctx.reply('Please enter a valid recipient\'s address ⚠️ ');
+            } 
+        } catch (error) {
+            console.log("Error", error)
+          
+        }
+    })
+
 })
 
 export { bot }
