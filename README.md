@@ -36,6 +36,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### ScreenShots
 <img width="200" alt="Mintograph Menu" src="src/img/mintograph.jpeg">
-
-
-
+<img width="200" alt="Mintograph NFT Minted" src="src/img/NFTminited.jpeg">
+<img width="200" alt="Mintograph Etherscan" src="src/img/etherscan.jpeg">
+<img width="200" alt="Mintograph NFT Transfered" src="src/img/NFTtransfrered.jpeg">
