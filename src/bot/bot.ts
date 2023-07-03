@@ -4,6 +4,7 @@ import { connetWallet, walletBalance } from '../controllers/walletController';
 import { sendMessage } from '../utils/telegram';
 import { mintNFT } from '../controllers/mintNFT';
 import { transferNFT } from '../controllers/transferNFT';
+import { fetchTransactions } from '../controllers';
 
 
 const bot = new Telegraf(ConfigParams.BOT_TOKEN)
@@ -72,6 +73,14 @@ bot.on('text', (ctx) => {
         let message = "Please enter a valid token ID\' ⚠️ ";
         sendMessage(message);
         console.log("Error", error)
+    }
+})
+
+bot.action("nfttxns", (ctx) => {
+    try {
+        fetchTransactions();
+    } catch (error) {
+        console.log(error);
     }
 })
 

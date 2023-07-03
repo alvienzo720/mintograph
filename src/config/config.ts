@@ -9,7 +9,8 @@ export const ConfigParams = {
     CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS || "",
     SENDER_ADDRESS: process.env.SENDER_ADDRESS || "",
     RECI_ADDRESS: process.env.RECI_ADDRESS || "",
-    TOKENURI: process.env.TOKENURI || ""
+    TOKENURI: process.env.TOKENURI || "",
+    ETH_SCAN_API: process.env.ETH_SCAN_API || ""
 }
 
 export const provider = new ethers.providers.JsonRpcProvider(ConfigParams.INFURA_URL);
