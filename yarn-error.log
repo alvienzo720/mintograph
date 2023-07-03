@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.17_2/libexec/bin/yarn.js add @types/ipfs-http-client
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.17_2/libexec/bin/yarn.js add @types/telegraf
 
 PATH: 
-  /Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.8/bin:LOCAL_PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/alvinmutebi/utils/flutter/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+  /Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.8/bin:LOCAL_PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.8/bin:LOCAL_PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Users/alvinmutebi/utils/flutter/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/alvinmutebi/utils/flutter/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
 
 Yarn version: 
   1.22.17
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fipfs-http-client: Not found
+  Error: https://registry.yarnpkg.com/@types%2ftelegraf: Not found
       at params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:67029:18)
       at self.callback (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:140883:22)
       at Request.emit (node:events:513:28)

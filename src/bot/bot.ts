@@ -58,24 +58,22 @@ bot.action("mintnft", async (ctx) => {
 
 })
 
-let reciver_address = ""
+let tokenid: string = "";
 bot.action("transfernft", async (ctx) => {
-    ctx.reply('Please enter the recipient\'s address');
-    bot.on('text', (ctx) => {
-        reciver_address = ctx.message.text;
-        try {
-            if(reciver_address.length == 42 && reciver_address.startsWith("Ox")){
-                transferNFT(provider, ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.SENDER_ADDRESS, reciver_address, 21);
-            }else {
-                ctx.reply('Please enter a valid recipient\'s address ⚠️ ');
-            } 
-        } catch (error) {
-            console.log("Error", error)
-          
-        }
-    })
-
+    ctx.reply('Please enter the token ID');
 })
+bot.on('text', (ctx) => {
+    tokenid = ctx.message.text;
+    tokenid = ctx.message.text;
+    try {
+        transferNFT(provider, ConfigParams.PRIVATE_KEY, ConfigParams.CONTRACT_ADDRESS, ConfigParams.SENDER_ADDRESS, ConfigParams.RECI_ADDRESS, tokenid);
+    } catch (error) {
+        let message = "Please enter a valid token ID\' ⚠️ ";
+        sendMessage(message);
+        console.log("Error", error)
+    }
+})
+
 
 export { bot }
 
