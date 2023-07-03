@@ -8,6 +8,8 @@ Mintograph is a Telegram bot designed to simplify the process of creating and ma
 - Mint your own NFTs.
 - View and manage your NFTs directly through Telegram.
 - Transafer NFTS to to other addresses.
+- View Recent NFT Transactions.
+- Get All your NFT links.
 
 ## Technologies Used
 
@@ -31,4 +33,9 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository
    ```sh
    git clone https://github.com/alvienzo720/mintograph
+
+### ScreenShots
+<img width="200" alt="Mintograph Menu" src="src/img/mintograph.jpeg">
+
+
 
