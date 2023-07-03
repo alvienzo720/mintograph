@@ -14,6 +14,12 @@ export async function fetchTransactions() {
             let message = 'Your Transactions:\n\n';
 
             transactions.forEach((Txn: { tokenSymbol: any; contractAddress: any; from: any; to: any; }) => {
+            
+            // //filiter tokenSymbol
+            // const filterTokens=['NFT','ERC-721']
+            // if(!filterTokens.includes(Txn['tokenSymbol'])) return "Not found"
+            message += '\nTransaction Details:\n';
+
                 message += `Token Symbol: ${Txn.tokenSymbol}\n`;
                 message += `Contract Address: ${Txn.contractAddress}\n`;
                 message += `From: ${Txn.from}\n`;
