@@ -19,10 +19,11 @@ bot.start((ctx) => {
                 Markup.button.callback('Minit NFT', 'mintnft'),
                 Markup.button.callback('Transafer NFT', 'transfernft')
             ],
+            [
+                Markup.button.callback('Get MyNFTs', 'getnfts'),
+                Markup.button.callback('View My NFT Txns', 'nfttxns')
+            ],
         ]
-
-
-
     )
     ctx.reply('Please have your wallet key ready', { reply_markup: { inline_keyboard: custom_keyboard.reply_markup.inline_keyboard } })
 })
