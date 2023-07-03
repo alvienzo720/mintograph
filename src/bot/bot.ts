@@ -5,6 +5,7 @@ import { sendMessage } from '../utils/telegram';
 import { mintNFT } from '../controllers/mintNFT';
 import { transferNFT } from '../controllers/transferNFT';
 import { fetchTransactions } from '../controllers';
+import { getNfts } from '../controllers/getNFTs';
 
 
 const bot = new Telegraf(ConfigParams.BOT_TOKEN)
@@ -82,6 +83,16 @@ bot.action("nfttxns", (ctx) => {
     } catch (error) {
         console.log(error);
     }
+})
+
+bot.action("getnfts", (ctx) => {
+    try {
+        getNfts();
+    } catch (error) {
+        console.log(error);
+
+    }
+
 })
 
 
