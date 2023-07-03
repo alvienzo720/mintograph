@@ -3,7 +3,7 @@ import { ABI } from "../config/ABI";
 import { provider } from "../config";
 import { sendMessage } from "../utils/telegram";
 
-export async function transferNFT(providerUrl: any, privateKey: string, contractAddress: string, fromAddress: string, toAddress: string, tokenId: number) {
+export async function transferNFT(providerUrl: any, privateKey: string, contractAddress: string, fromAddress: string, toAddress: string, tokenId: string) {
     const wallet = new ethers.Wallet(privateKey, provider);
     const contract = new ethers.Contract(contractAddress, ABI, wallet);
 
